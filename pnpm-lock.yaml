@@ -2,8 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/eslint-config': ^0.31.0
-  '@es-js/esvue': 0.0.0
-  '@es-js/transpiler': 0.0.0
+  '@es-js/esvue': 0.0.4
+  '@es-js/transpiler': 0.0.2
   '@mdi/font': 5.9.55
   '@types/node': ^18.11.9
   '@types/webfontloader': ^1.6.35
@@ -27,8 +27,8 @@ specifiers:
   webfontloader: ^1.6.28
 
 dependencies:
-  '@es-js/esvue': 0.0.0
-  '@es-js/transpiler': 0.0.0
+  '@es-js/esvue': 0.0.4
+  '@es-js/transpiler': 0.0.2
   '@mdi/font': 5.9.55
   monaco-editor: 0.29.1
   roboto-fontface: 0.10.0
@@ -207,8 +207,8 @@ packages:
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
 
-  /@es-js/esvue/0.0.0:
-    resolution: {integrity: sha512-syYf5hqgmSVzBTjIrM5+qAo5YiePJzOfVGYs64mQ6gd9VQzMWHkMRkHcfvadSg/7BO9kAUQKcCjwYvwmLy7IVw==}
+  /@es-js/esvue/0.0.4:
+    resolution: {integrity: sha512-MjpT70qh5gbUD3tqYYYFfVfR9NM1HwED+rdtrGl+2O82+o6IvQ/V8v6dwN5eVrqUK09athbDogK/igfEdgUnGA==}
     dependencies:
       vue: 3.2.45
       xterm: 4.19.0
@@ -216,11 +216,8 @@ packages:
       xterm-addon-web-links: 0.5.1_xterm@4.19.0
     dev: false
 
-  /@es-js/transpiler/0.0.0:
-    resolution: {integrity: sha512-4Y1Cczdms7sdSVMfOG4ZQ6AaQN0XCgeGpwLTg3hAY9bvdzXK7hAUxfF+L5D5UPgBD0hV5uz6gMc74BAHF0WJXg==}
-    dependencies:
-      '@types/node': 18.11.9
-      typescript: 4.9.3
+  /@es-js/transpiler/0.0.2:
+    resolution: {integrity: sha512-uoRRsTkmdaMgVNSNsfCjw4ZGU0ZpF6mD0dgVuOE1IP5NK+GXJHqMb7cf9jsxwQ6mQUBUujLyoXUKvoiQk6+GsA==}
     dev: false
 
   /@esbuild/android-arm/0.15.15:
@@ -3071,6 +3068,7 @@ packages:
     resolution: {integrity: sha512-CIfGzTelbKNEnLpLdGFgdyKhG23CKdKgQPOBc+OUNrkJ2vr+KSzsSV5kq5iWhEQbok+quxgGzrAtGWCyU7tHnA==}
     engines: {node: '>=4.2.0'}
     hasBin: true
+    dev: true
 
   /ufo/0.8.6:
     resolution: {integrity: sha512-fk6CmUgwKCfX79EzcDQQpSCMxrHstvbLswFChHS0Vump+kFkw7nJBfTZoC1j0bOGoY9I7R3n2DGek5ajbcYnOw==}

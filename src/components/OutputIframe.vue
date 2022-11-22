@@ -6,44 +6,45 @@ const editor = useEditor()
 
 const iframe = ref()
 
-function updateIframe(code: string, sourceCode: string) {
-  console.log(['updateIframe', code, sourceCode])
+function updateIframe(codeWithoutImports: string, imports: string) {
   const source = `
   <html class="w-full h-full p-0 m-0">
     <script type="importmap">
       {
         "imports": {
           "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js",
-          "uno.css": "https://cdn.jsdelivr.net/npm/@unocss/runtime",
-          "@es-js/esvue": "https://unpkg.com/@es-js/esvue@0.0.0/dist/esvue.es.js"
+          "@es-js/esvue": "https://unpkg.com/@es-js/esvue@latest/dist/esvue.es.js"
         }
       }
     <\/script>
 
-    <body class="w-full h-full p-0 m-0 bg-gray-900">
-      <div id="app"></div>
+    <body class="m-0 p-0 bg-gray-800">
+      <div id="app" class="h-[100vh]"></div>
     </body>
 
     <script type="module">
-    import { createApp, h } from 'vue'
-    import 'uno.css';
-    import { usarConsola, Terminal } from '@es-js/esvue';
+    import { createApp } from 'vue'
+    import { Terminal, usarConsola } from '@es-js/esvue';
     const consola = usarConsola();
 
     const app = createApp({
       setup() {
+        ${imports}
+
         (async () => {
-        ${code}
+            ${codeWithoutImports}
         })();
       },
-      template: '<div class="flex flex-grow flex-col w-full h-full"> <Terminal class="w-full h-full"/> </div>'
+      template: '<Terminal/>'
     });
 
     app.component('Terminal', Terminal);
     app.mount('#app');
     <\/script>
 
-    <link rel="stylesheet" href="https://unpkg.com/@es-js/esvue@0.0.0/dist/style.css" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"><\/script>
+
+    <link rel="stylesheet" href="https://unpkg.com/@es-js/esvue@latest/dist/style.css" type="text/css" />
   </html>
   `
 
@@ -51,9 +52,9 @@ function updateIframe(code: string, sourceCode: string) {
 }
 
 onMounted(() => {
-  const { iframeCode, sourceCode } = editor.transpileCode(editor.output.value)
+  const { codeWithoutImports, imports } = editor.transpileCode(editor.output.value)
 
-  updateIframe(iframeCode, sourceCode)
+  updateIframe(codeWithoutImports, imports)
 })
 </script>
 
