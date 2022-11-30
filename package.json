@@ -7,8 +7,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@es-js/esvue": "0.0.4",
-    "@es-js/transpiler": "0.0.2",
+    "@es-js/consola": "0.0.6",
+    "@es-js/core": "^0.0.0",
     "@mdi/font": "5.9.55",
     "monaco-editor": "~0.29.1",
     "roboto-fontface": "*",

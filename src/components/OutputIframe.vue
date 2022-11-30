@@ -8,23 +8,23 @@ const iframe = ref()
 
 function updateIframe(codeWithoutImports: string, imports: string) {
   const source = `
-  <html class="w-full h-full p-0 m-0">
+  <html>
     <script type="importmap">
       {
         "imports": {
           "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js",
-          "@es-js/esvue": "https://unpkg.com/@es-js/esvue@latest/dist/esvue.es.js"
+          "@es-js/consola": "https://unpkg.com/@es-js/consola@latest/dist/consola.es.js"
         }
       }
     <\/script>
 
-    <body class="m-0 p-0 bg-gray-800">
-      <div id="app" class="h-[100vh]"></div>
+    <body class="m-0 p-0">
+      <div id="app" class="h-screen"></div>
     </body>
 
     <script type="module">
     import { createApp } from 'vue'
-    import { Terminal, usarConsola } from '@es-js/esvue';
+    import { EsConsola, usarConsola } from '@es-js/consola';
     const consola = usarConsola();
 
     const app = createApp({
@@ -35,16 +35,15 @@ function updateIframe(codeWithoutImports: string, imports: string) {
             ${codeWithoutImports}
         })();
       },
-      template: '<Terminal/>'
+      template: '<EsConsola/>'
     });
 
-    app.component('Terminal', Terminal);
+    app.component('EsConsola', EsConsola);
     app.mount('#app');
     <\/script>
 
     <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"><\/script>
-
-    <link rel="stylesheet" href="https://unpkg.com/@es-js/esvue@latest/dist/style.css" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/@es-js/consola@latest/dist/style.css" type="text/css" />
   </html>
   `
 

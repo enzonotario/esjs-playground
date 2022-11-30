@@ -2,8 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/eslint-config': ^0.31.0
-  '@es-js/esvue': 0.0.4
-  '@es-js/transpiler': 0.0.2
+  '@es-js/consola': 0.0.6
+  '@es-js/core': ^0.0.0
   '@mdi/font': 5.9.55
   '@types/node': ^18.11.9
   '@types/webfontloader': ^1.6.35
@@ -27,8 +27,8 @@ specifiers:
   webfontloader: ^1.6.28
 
 dependencies:
-  '@es-js/esvue': 0.0.4
-  '@es-js/transpiler': 0.0.2
+  '@es-js/consola': 0.0.6
+  '@es-js/core': 0.0.0
   '@mdi/font': 5.9.55
   monaco-editor: 0.29.1
   roboto-fontface: 0.10.0
@@ -207,17 +207,14 @@ packages:
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
 
-  /@es-js/esvue/0.0.4:
-    resolution: {integrity: sha512-MjpT70qh5gbUD3tqYYYFfVfR9NM1HwED+rdtrGl+2O82+o6IvQ/V8v6dwN5eVrqUK09athbDogK/igfEdgUnGA==}
+  /@es-js/consola/0.0.6:
+    resolution: {integrity: sha512-GdlVOj4rCU5vVOff9WPPgX/0VQ+FkY5uaNxkJXs5xNxo/M4KjOMHWtDl9XWh8mma8j+wZHWtpMtcDCz6UyMRGA==}
     dependencies:
       vue: 3.2.45
-      xterm: 4.19.0
-      xterm-addon-fit: 0.5.0_xterm@4.19.0
-      xterm-addon-web-links: 0.5.1_xterm@4.19.0
     dev: false
 
-  /@es-js/transpiler/0.0.2:
-    resolution: {integrity: sha512-uoRRsTkmdaMgVNSNsfCjw4ZGU0ZpF6mD0dgVuOE1IP5NK+GXJHqMb7cf9jsxwQ6mQUBUujLyoXUKvoiQk6+GsA==}
+  /@es-js/core/0.0.0:
+    resolution: {integrity: sha512-gZSXP4cCLpF65wlnQxkP1C8K3AiyhepOguk71G0lTql0I7DI5mbbnWQTlFk6yzfPBAMHH7iwrdlnm2ihd13Jxw==}
     dev: false
 
   /@esbuild/android-arm/0.15.15:
@@ -3419,26 +3416,6 @@ packages:
     resolution: {integrity: sha512-ICP2e+jsHvAj2E2lIHxa5tjXRlKDJo4IdvPvCXbXQGdzSfmSpNVyIKMvoZHjDY9DP0zV17iI85o90vRFXNccRw==}
     engines: {node: '>=12'}
     dev: true
-
-  /xterm-addon-fit/0.5.0_xterm@4.19.0:
-    resolution: {integrity: sha512-DsS9fqhXHacEmsPxBJZvfj2la30Iz9xk+UKjhQgnYNkrUIN5CYLbw7WEfz117c7+S86S/tpHPfvNxJsF5/G8wQ==}
-    peerDependencies:
-      xterm: ^4.0.0
-    dependencies:
-      xterm: 4.19.0
-    dev: false
-
-  /xterm-addon-web-links/0.5.1_xterm@4.19.0:
-    resolution: {integrity: sha512-dBjbOIrCNmxAcUQkkSrKj9BM6yLpmqUpZ9SOCUuZe/sznPl4d8OBZQClK7VcdZ0vf0+5i5Fce2rUUrew/XTZTg==}
-    peerDependencies:
-      xterm: ^4.0.0
-    dependencies:
-      xterm: 4.19.0
-    dev: false
-
-  /xterm/4.19.0:
-    resolution: {integrity: sha512-c3Cp4eOVsYY5Q839dR5IejghRPpxciGmLWWaP9g+ppfMeBChMeLa1DCA+pmX/jyDZ+zxFOmlJL/82qVdayVoGQ==}
-    dev: false
 
   /yallist/4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}

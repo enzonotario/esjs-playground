@@ -1,6 +1,6 @@
 import { ref } from 'vue'
-import { splitCodeImports, transpile } from '@es-js/transpiler'
-import { usarConsola } from '@es-js/esvue'
+import { splitCodeImports, transpile } from '@es-js/core'
+import { usarConsola } from '@es-js/consola'
 
 const consola = usarConsola()
 
