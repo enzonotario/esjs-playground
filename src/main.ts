@@ -1,20 +1,28 @@
 import { createApp } from 'vue'
 import VueGtag from 'vue-gtag'
+import { loadWASM } from 'onigasm'
+import onigasmWasm from 'onigasm/lib/onigasm.wasm?url'
 import App from './App.vue'
-import vuetify from './plugins/vuetify'
 import { loadFonts } from '@/plugins/webfontloader'
 
 import 'uno.css'
+import '@unocss/reset/tailwind.css'
 
 const app = createApp(App)
 
-loadFonts()
+async function init() {
+  await loadFonts()
 
-app
-  .use(vuetify)
-  .use(VueGtag, {
-    config: {
-      id: import.meta.env.VITE_GTAG_ID,
-    },
-  })
-  .mount('#app')
+  await loadWASM(onigasmWasm)
+
+  app
+    .use(VueGtag, {
+      config: {
+        id: import.meta.env.VITE_GTAG_ID,
+      },
+    })
+    .mount('#app')
+}
+
+init()
+

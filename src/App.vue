@@ -1,15 +1,15 @@
-<script setup lang="ts">
-import Playground from '@/components/Playground.vue'
-</script>
-
 <template>
-  <v-app>
-    <v-app-bar app flat height="46">
+  <div class="w-full h-screen">
+    <div class="h-[46px] bg-gray-900 text-gray-50">
       <AppBar />
-    </v-app-bar>
+    </div>
 
-    <v-main>
-      <Playground />
-    </v-main>
-  </v-app>
+    <Playground />
+  </div>
 </template>
+
+<style>
+html {
+  overflow: hidden !important;
+}
+</style>

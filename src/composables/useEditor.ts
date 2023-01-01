@@ -1,8 +1,5 @@
 import { ref } from 'vue'
 import { splitCodeImports, transpile } from '@es-js/core'
-import { usarConsola } from '@es-js/consola'
-
-const consola = usarConsola()
 
 const code = ref('')
 
@@ -14,7 +11,6 @@ export const useEditor = () => {
   }
 
   function cleanPreviousExecution() {
-    consola.limpiar()
     output.value = null
   }
 

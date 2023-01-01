@@ -4,7 +4,7 @@ export async function loadFonts() {
 
   webFontLoader.load({
     google: {
-      families: ['Fira Code:300,400,600&display=swap', 'Roboto:300,400,600&display=swap'],
+      families: ['Fira Code:400&display=swap'],
     },
   })
 }
